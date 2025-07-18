@@ -1,0 +1,354 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: #003366;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header .logo {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+  }
+  
+  header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  
+  header nav ul li a:hover {
+    color: #FFD700;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+  }
+  
+  .hero-section .carousel-inner {
+    height: 100%;
+  }
+  
+  .hero-section .carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .hero-section .carousel-caption h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .hero-section .carousel-caption p {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  
+  /* About Section */
+  .about {
+    background: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 30px;
+  }
+  
+  .about p {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #333;
+  }
+  
+  /* Services Section */
+  .services-section {
+    text-align: center;
+    background-color: white;
+    padding: 60px 20px;
+  }
+  
+  .services-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #003366;
+  }
+  
+  .services-section p {
+    font-size: 22px;
+    margin-top: 10px;
+    color: #666;
+  }
+  
+  .service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 180px;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .card p {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  /* Ratings Section */
+  .ratings {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  .ratings h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 30px;
+  }
+  
+  .review-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .review-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: left;
+  }
+  
+  .review-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 10px;
+  }
+  
+  .review-card p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+  }
+  
+  /* Popup Styles */
+  .popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 30px;
+    z-index: 1000;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .popup h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #003366;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .popup input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .popup button {
+    width: 100%;
+    padding: 10px;
+    background-color: #003366;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .popup button:hover {
+    background-color: #0055aa;
+  }
+  
+  .overlay {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 500;
+  }
+  
+  .popup.active,
+  .overlay.active {
+    display: block;
+  }
+   /* Footer Styles (Fix)*/
+
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 40px 60px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .footer-content > div {
+    flex: 1 1 200px;
+    margin: 15px;
+  }
+  
+  .footer-content strong {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  
+   /*  Responsive Design*/
+  
+  @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .hero-image img {
+      margin-top: 20px;
+    }
+  
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+  
+    footer {
+      padding: 30px 20px;
+    }
+  
+    
+  }
+  /* Button Styles */
+.button {
+    margin-top: 30px;
+    background-color: #002f5f; /* Dark blue */
+    color: white; /* Ensure text is white */
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: #004080; 
+    color: #ffffff;
+  }
+  
+  .button a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .button a:hover {
+    color: #ffffff;
+  }
+  
+  .rev-button {
+    background-color: #002f5f; /* Dark blue */
+    color: white; /* Ensure text is white */
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .rev-button:hover {
+    background-color: #004080; 
+    color: #ffffff;
+  }
+  
+  .rev-button a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .rev-button a:hover {
+    color: #ffffff;
+  }
+  

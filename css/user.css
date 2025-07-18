@@ -1,0 +1,693 @@
+/* --------------------
+   General Styles
+-------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* --------------------
+   Header Styles
+-------------------- */
+header {
+  background-color: #003366;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.logo img {
+  display: inline-block;
+  width: 50px; 
+  height: auto; 
+  margin-right: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #FFD700;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* --------------------
+   Hero Section Styles
+-------------------- */
+/* Hero Section Styles */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* Adjust height to maximize size */
+  overflow: hidden;
+}
+
+.hero-section .carousel-inner {
+  height: 100%;
+}
+
+.hero-section .carousel-image {
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire carousel area */
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background for better readability */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.carousel-caption h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.carousel-caption p {
+  font-size: 1.5rem;
+  color: #fff;
+}
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.carousel-caption h1 {
+  font-size: 3rem; /* Large font size for the title */
+  font-weight: bold;
+  color: #fff; /* White text color */
+}
+
+.carousel-caption p {
+  font-size: 1.5rem; /* Medium font size for the description */
+  color: #fff; /* White text color */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    height: 60vh; /* Reduce height for smaller screens */
+  }
+
+  .carousel-caption h1 {
+    font-size: 2rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+}
+/* --------------------
+   About Section Styles
+-------------------- */
+.about {
+  background: #ffffff; /* White background for a clean look */
+  padding: 60px 20px;
+  text-align: center;
+  opacity: 100;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.about.show {
+  opacity: 100;
+  transform: translateY(0);
+}
+
+.about h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #003366; /* Dark blue for the title */
+  margin-bottom: 30px;
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333; /* Dark gray for the text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about {
+    padding: 40px 15px;
+  }
+  .about h2 {
+    font-size: 28px;
+  }
+  .about p {
+    font-size: 16px;
+  }
+}
+/* --------------------
+   Services Section Styles
+-------------------- */
+.services-section {
+  text-align: center;
+  background-color: white;
+  padding: 60px 20px;
+}
+
+.services-bg {
+  background-image: url('../img/img4.png'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  padding: 130px;
+  width: 100%;
+  color: #787ecf; 
+  text-align: center;
+}
+
+.services-bg h2 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.services-bg p {
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: -60px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 180px;
+  padding: 15px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card p {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
+
+/* Button Styles */
+.button {
+  margin-top: 30px;
+  background-color: #002f5f; /* Dark blue */
+  color: white; /* Ensure text is white */
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+  background-color: #004080; 
+  color: #ffffff;
+}
+
+.button a {
+  color: white;
+  text-decoration: none;
+}
+
+.button a:hover {
+  color: #ffffff;
+}
+
+.rev-button {
+  background-color: #002f5f; /* Dark blue */
+  color: white; /* Ensure text is white */
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.rev-button:hover {
+  background-color: #004080; 
+  color: #ffffff;
+}
+
+.rev-button a {
+  color: white;
+  text-decoration: none;
+}
+
+.rev-button a:hover {
+  color: #ffffff;
+}
+
+
+
+/* --------------------
+   Ratings Section Styles
+-------------------- */
+.ratings {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 30px;
+}
+
+.review-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.review-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 300px;
+  text-align: left;
+}
+
+.review-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.review-rating {
+  font-size: 16px;
+  color: #FFD700;
+  margin-bottom: 10px;
+}
+
+.review-text {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* --------------------
+   Popup Styles
+-------------------- */
+
+
+.popup {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 30px;
+  z-index: 1000;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+}
+
+.popup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.popup-form h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #003366;
+  text-align: center;
+}
+
+.popup-form input,
+.popup-form textarea,
+.popup-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.popup-form button {
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popup-form button:hover {
+  background-color: #0055aa;
+}
+
+.close-button {
+  margin-top: 10px;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+  background-color: #c9302c;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 500;
+}
+
+.popup.active,
+.overlay.active {
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .review-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .popup {
+    width: 95%;
+  }
+}
+  /* Footer Styles (Fix)*/
+
+footer {
+  background-color: #003366;
+  color: white;
+  padding: 40px 60px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.footer-content > div {
+  flex: 1 1 200px;
+  margin: 15px;
+}
+
+.footer-content strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+.signup-btn {
+  text-decoration: underline; /* or none if you want to remove it */
+  color: #fff;
+}
+
+
+
+ /*  Responsive Design*/
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    margin-top: 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  footer {
+    padding: 30px 20px;
+  }
+
+  
+}
+
+
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed relative to the viewport */
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the modal content */
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px; /* Limit the width of the modal */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out; /* Smooth fade-in animation */
+}
+
+.modal-content h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.modal-content label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #333;
+}
+
+.modal-content textarea {
+  resize: none;
+}
+
+.modal-content button {
+  width: 100%;
+  padding: 10px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #002244;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #333;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* General Image Styling */
+img {
+  max-width: 100%; /* Ensures images never exceed their container width */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Removes inline spacing below images */
+  border-radius: 10px; /* Adds rounded corners for a modern look */
+}
+
+/* Hero Section Images (Carousel) */
+.hero-section .carousel-image {
+  width: 100%; /* Ensures the image fills the carousel width */
+  height: 100%; /* Ensures the image fills the carousel height */
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
+/* Service Cards Images */
+.service-cards .card img {
+  width: 100%; /* Ensures the image fills the card width */
+  height: 150px; /* Sets a fixed height for uniformity */
+  object-fit: cover; /* Ensures the image covers the card area without distortion */
+  border-radius: 10px; /* Adds rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for better visibility */
+}
+
+/* Review Section Images (if any) */
+.ratings .box img {
+  width: 80px; /* Sets a fixed width for review images */
+  height: 80px; /* Sets a fixed height for review images */
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  border-radius: 50%; /* Makes the image circular */
+  margin-bottom: 10px; /* Adds spacing below the image */
+}
+
+/* Footer Images (if any) */
+.footer-content img {
+  width: 50px; /* Sets a fixed width for footer images */
+  height: 50px; /* Sets a fixed height for footer images */
+  object-fit: contain; /* Ensures the image fits within the container without cropping */
+  margin-right: 10px; /* Adds spacing to the right of the image */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section .carousel-image {
+    height: 60vh; /* Reduces the height of carousel images on smaller screens */
+  }
+
+  .service-cards .card img {
+    height: 120px; /* Reduces the height of service card images on smaller screens */
+  }
+
+  .ratings .box img {
+    width: 60px; /* Reduces the size of review images on smaller screens */
+    height: 60px;
+  }
+  .ratings {
+    padding: 20px;
+  }
+}

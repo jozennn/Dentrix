@@ -1,0 +1,202 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: #003366;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+.calendar-section, .slots-section {
+    flex: 1;
+    margin-right: 20px;
+    min-width: 280px;
+}
+
+.slots-section {
+    margin-right: 0;
+}
+
+.calendar-section .calendar {
+    border: 2px solid #003366;
+    border-radius: 8px;
+    padding: 12px 6px 10px 6px;
+    background: #fafcff;
+}
+
+.calendar-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.calendar-header h2 {
+    margin: 0;
+    font-size: 18px;
+    display: inline-block;
+}
+
+.calendar-header button {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0 8px;
+}
+
+.calendar-info {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    gap: 2px;
+}
+
+.calendar .day {
+    font-weight: bold;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+}
+
+.calendar .date {
+    padding: 10px 0;
+    margin: 5px 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #f7f9fa;
+    border: 1px solid transparent;
+    transition: border 0.2s, background 0.2s;
+}
+
+.calendar .date.available {
+    background-color: #4caf50;
+    color: white;
+    border-color: #388e3c;
+}
+
+.calendar .date.selected {
+    background-color: #ffcc00; /* Highlight selected date */
+    color: white;
+    border-color: #f57c00; /* Darker border on selection */
+}
+
+.calendar .date:hover {
+    opacity: 0.8;
+}
+
+.slot {
+    margin: 10px 0;
+    padding: 8px;
+    background-color: #e1f5fe;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.slot:hover {
+    background-color: #b3e5fc;
+}
+
+.slot .status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.slot .status.booked {
+    background-color: #f44336;
+    color: white;
+}
+
+.slot .status.pending {
+    background-color: #ff9800;
+    color: white;
+}
+
+.slot .status.available {
+    background-color: #4caf50;
+    color: white;
+}
+
+.highlight {
+    background-color: #ffeb3b; /* Yellow highlight on select */
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button.back {
+    background-color: #003366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+button.next {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .calendar-section, .slots-section {
+        flex: 1 1 100%;
+    }
+}

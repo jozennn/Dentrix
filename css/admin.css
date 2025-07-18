@@ -1,0 +1,376 @@
+/* --------------------
+   General Styles
+-------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* --------------------
+   Header Styles
+-------------------- */
+header {
+  background-color: #003366;
+  color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.logo img {
+  display: inline-block;
+  width: 50px; 
+  height: auto; 
+  margin-right: 10px; 
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #FFD700;
+}
+
+/* --------------------
+   Manage Carousel Section
+-------------------- */
+.manage-carousel {
+  margin: 40px auto;
+  max-width: 900px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.manage-carousel h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #003366;
+}
+
+.manage-carousel form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.manage-carousel form input,
+.manage-carousel form textarea,
+.manage-carousel form button {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.manage-carousel form button {
+  background-color: #003366;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.manage-carousel form button:hover {
+  background-color: #0055aa;
+}
+
+/* --------------------
+   Table for Slides and Reviews
+-------------------- */
+
+.manage-reviews {
+  margin: 40px auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.manage-reviews h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.slides-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.slides-table th, .slides-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.slides-table th {
+  background-color: #003366;
+  color: white;
+  font-weight: bold;
+}
+
+.slides-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.slides-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.slides-table tbody .btn-danger {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.slides-table tbody .btn-danger:hover {
+  background-color: #c9302c;
+}
+.btn-danger {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+
+/* --------------------
+   About Section Styles
+-------------------- */
+.manage-about {
+  margin: 40px auto;
+  max-width: 800px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.manage-about h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #003366;
+}
+
+.manage-about form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.manage-about form label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #003366;
+}
+
+.manage-about form input,
+.manage-about form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.manage-about form button {
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.manage-about form button:hover {
+  background-color: #0055aa;
+}
+
+/* --------------------
+   Services Section Styles
+-------------------- */
+.services-section {
+  text-align: center;
+  background-color: white;
+  padding: 60px 20px;
+}
+
+.services-bg {
+  background-image: url('../img/img4.png'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  padding: 130px;
+  width: 100%;
+  color: #787ecf; 
+  text-align: center;
+}
+
+.services-bg h2 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.services-bg p {
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: -60px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 180px;
+  padding: 15px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card p {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
+
+/* Button Styling */
+.button {
+  margin-top: 30px;
+  background-color: #002f5f; /* Dark blue */
+  color: white; /* Ensure text is white */
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button:hover {
+  background-color: #004080; 
+  color: #ffffff;
+}
+
+.button a {
+  color: white;
+  text-decoration: none;
+}
+
+.button a:hover {
+  color: #ffffff;
+}
+/* --------------------
+   Footer Styles
+-------------------- */
+footer {
+  background-color: #003366;
+  color: white;
+  padding: 40px 60px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.footer-content > div {
+  flex: 1 1 200px;
+  margin: 15px;
+}
+
+.footer-content strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* --------------------
+   Responsive Design
+-------------------- */
+@media (max-width: 768px) {
+  .manage-carousel {
+    padding: 20px;
+  }
+
+  .slides-table th,
+  .slides-table td {
+    font-size: 14px;
+  }
+
+  .about h2 {
+    font-size: 28px;
+  }
+
+  .about p {
+    font-size: 16px;
+  }
+  .manage-carousel {
+    padding: 15px;
+  }
+  .manage-carousel h2 {
+    font-size: 22px;
+  }
+}

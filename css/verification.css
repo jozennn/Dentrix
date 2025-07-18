@@ -1,0 +1,31 @@
+body {
+    background-color: #f5f8fc;
+    font-family: 'Segoe UI', sans-serif;
+}
+.navbar {
+    background-color: #002f5f;
+}
+.navbar-brand {
+    color: white;
+    font-weight: bold;
+}
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+.card-header {
+    background: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #002f5f;
+    border-bottom: none;
+}
+.btn-primary {
+    background-color: #002f5f;
+    border-color: #002f5f;
+}
+.btn-primary:hover {
+    background-color: #001e3f;
+    border-color: #001e3f;
+}
